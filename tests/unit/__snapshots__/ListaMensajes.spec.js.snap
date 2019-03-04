@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListaMensajes.vue Tiene la estructura HTML esperada 1`] = `
+<ul>
+  <li
+    class="mensaje"
+    style="margin-top: 10px;"
+  >
+    Item test
+  </li>
+</ul>
+`;

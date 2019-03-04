@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App.vue Tiene la estructura HTML esperada 1`] = `
+<div
+  id="app"
+>
+  <listamensajes-stub
+    mensajes="Hola Don Pepito,Hola Don José"
+  />
+</div>
+`;
