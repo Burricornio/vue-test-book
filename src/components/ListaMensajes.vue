@@ -5,6 +5,7 @@
       v-for="(mensaje, indice) in mensajes"
       :key="indice"
       :mensaje= "mensaje"
+      @mensaje-clickado="gestionarMensajeClick"
       >
     </Mensaje>
   </ul>
@@ -18,6 +19,11 @@ export default {
     components: {
       Mensaje
     },
-    props: ['mensajes']
+    props: ['mensajes'],
+    methods: {
+      gestionarMensajeClick(mensaje) {
+        console.log(mensaje)
+      }
+    }
   }
 </script>

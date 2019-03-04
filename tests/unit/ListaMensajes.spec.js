@@ -58,4 +58,13 @@ describe('ListaMensajes.vue', () => {
   it('Mensaje tiene el estilo "margin-top: 10"', () => {
   expect(wrapper.find(Mensaje).attributes().style).toBe('margin-top: 10px;')
   })
+
+  // Eventos
+  it('Llama a gestionarMensajeClick cuando @mensaje-click se produce', () => {
+    const stub = jest.fn()
+    wrapper.setMethods({ gestionarMensajeClick: stub })
+
+    wrapper.find(Mensaje).vm.$emit('mensaje-clickado', 'gato')
+    expect(stub).toBeCalledWith('gato')
+  })
 })

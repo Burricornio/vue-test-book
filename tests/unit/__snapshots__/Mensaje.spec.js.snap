@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Mensaje.vue Tiene el mismo HTML 1`] = `
+<li
+  class="mensaje"
+  style="margin-top: 10px;"
+>
+  Hola
+</li>
+`;
