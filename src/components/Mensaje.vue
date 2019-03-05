@@ -16,7 +16,7 @@ export default {
     }
   },
   methods: {
-    onClick() {
+    onClick () {
       this.$emit('mensaje-clickado', this.mensaje)
     }
   }

@@ -6,7 +6,20 @@ exports[`App.vue Tiene la estructura HTML esperada 1`] = `
 >
   <listamensajes-stub
     mensajes="Hola Don Pepito,Hola Don José"
-  />
+  >
+    <header>
+      Header externo
+    </header>
+     
+    <mensaje-stub
+      autor="Maria"
+      mensaje="Hola Don Pepito"
+    />
+    <mensaje-stub
+      autor="Maria"
+      mensaje="Hola Don José"
+    />
+  </listamensajes-stub>
    
   <formulario-stub
     reversed="true"

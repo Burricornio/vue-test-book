@@ -1,12 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ListaMensajes.vue Tiene la estructura HTML esperada 1`] = `
-<ul>
-  <li
-    class="mensaje"
-    style="margin-top: 10px;"
+<div>
+  <header
+    class="list-header"
   >
-    Item test
-  </li>
-</ul>
+    
+      Este es el header por defecto...
+    
+  </header>
+   
+  <ul
+    class="lista-mensajes"
+  >
+    <div
+      class="mensaje-falso"
+    />
+  </ul>
+</div>
 `;

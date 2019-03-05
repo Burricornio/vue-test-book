@@ -32,7 +32,7 @@ export default {
     }
   },
   methods: {
-    onSubmit(value) {
+    onSubmit (value) {
       // Forma Cesar
       // const promesaGet = this.http.get('https://jsonplaceholder.typicode.com/posts?q=' + value)
       const promesaGet = axios.get('https://jsonplaceholder.typicode.com/posts?q=' + value)
