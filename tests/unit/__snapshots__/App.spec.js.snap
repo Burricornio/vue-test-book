@@ -7,5 +7,9 @@ exports[`App.vue Tiene la estructura HTML esperada 1`] = `
   <listamensajes-stub
     mensajes="Hola Don Pepito,Hola Don José"
   />
+   
+  <formulario-stub
+    reversed="true"
+  />
 </div>
 `;

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Formulario.vue El HTML no ha sufrido modificaciones 1`] = `
+<div>
+  <form
+    action=""
+  >
+    <input
+      type="text"
+    />
+     
+    <span
+      class="reversed"
+    >
+      
+    </span>
+  </form>
+</div>
+`;
