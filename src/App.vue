@@ -8,6 +8,7 @@
 <script>
 import ListaMensajes from './components/ListaMensajes.vue'
 import Formulario from './components/Formulario.vue'
+import axios from 'axios'
 
 export default {
   name: 'app',
@@ -15,6 +16,10 @@ export default {
     ListaMensajes,
     Formulario
   },
+  // Forma Cesar
+  // provide: {
+  //   http: axios,
+  // },
   data () {
     return {
       mensajes: ['Hola Don Pepito', 'Hola Don José']

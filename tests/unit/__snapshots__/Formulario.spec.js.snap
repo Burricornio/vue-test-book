@@ -14,6 +14,12 @@ exports[`Formulario.vue El HTML no ha sufrido modificaciones 1`] = `
     >
       
     </span>
+     
+    <button
+      type="submit"
+    >
+      Enviar
+    </button>
   </form>
 </div>
 `;

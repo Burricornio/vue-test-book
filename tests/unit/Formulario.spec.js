@@ -1,12 +1,21 @@
 import { shallowMount } from '@vue/test-utils'
 import Formulario from '@/components/Formulario.vue'
-import { doesNotReject } from 'assert';
+import axios from './__mocks__/axios'
 
 describe('Formulario.vue', () => {
   let wrapper
+  // Forma Cesar
+  // let http = {
+  //   get: jest.fn()
+  // }
 
   beforeEach(() => {
+    // Forma Cesar
+    // wrapper = shallowMount(Formulario, { provide: { http }})
     wrapper = shallowMount(Formulario)
+    // Resetea los mocks (axios)
+    jest.resetModules()
+    jest.clearAllMocks()
   })
 
   it('El HTML no ha sufrido modificaciones', () => {
@@ -48,7 +57,8 @@ describe('Formulario.vue', () => {
 
     it('no se llama si los valores son iguales', () => {
       wrapper = shallowMount(Formulario, {
-        data: () => ({ inputValue: 'Lemmy super perrete' })
+        data: () => ({ inputValue: 'Lemmy super perrete' }),
+        // provide: { http } -- Forma Cesar
       })
       wrapper.setData({ inputValue: 'Lemmy super perrete' })
 
@@ -59,5 +69,27 @@ describe('Formulario.vue', () => {
       wrapper.setData({ inputValue: 'Lemmy el perrete' })
       expect(spy).toBeCalled()
     })
+  })
+
+  describe('Metodos - onSubmit(Mock de axios)', () => {
+
+    it('Llama a axios.get and y comprueba el resultado de la promesa', async () => {
+      // Forma Cesar
+      // http.get.mockResolvedValue('pepito')
+
+      // Forma Cesar
+      // expect(http.get).toHaveBeenCalledWith('https://jsonplaceholder.typicode.com/posts?q=lemmy')
+
+      const resultado = await wrapper.vm.onSubmit('lemmy')
+
+      expect(resultado).toEqual({ data: [3] })
+      expect(wrapper.vm.results).toEqual([3])
+      expect(axios.get).toBeCalledWith('https://jsonplaceholder.typicode.com/posts?q=lemmy')
+    })
+
+    //Este test debería fallar, ¡pero no lo hace! Porque axios.get ha sido llamado en el test anterior
+    // it('Aquí no debería ser llamado', () => {
+    //   expect(axios.get).toBeCalledWith('https://jsonplaceholder.typicode.com/posts?q=lemmy')
+    // })
   })
 })
